@@ -3,12 +3,29 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.9.13",
+    "@material-ui/lab": "^4.0.0-alpha.52",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier-react": "0.0.24",
+    "express": "^4.17.1",
+    "heroku": "^7.40.0",
+    "lodash": "^4.17.15",
+    "logger": "0.0.1",
+    "moment": "^2.25.3",
+    "prettier-airbnb-config": "^1.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "reload": "^3.0.4",
+    "styled-components": "^5.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -30,5 +47,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-plugin-flowtype": "^4.7.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "nodemon": "^2.0.3",
+    "prettier": "^2.0.4"
   }
 }
