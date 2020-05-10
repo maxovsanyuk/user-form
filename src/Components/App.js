@@ -8,7 +8,7 @@ const App = () => {
     <Router>
       <Switch>
         <Route exact path="/LeeLoo" component={UsersTable} />
-        <Route exact path="LeeLoo/page/:page" component={UsersTable} />
+        <Route exact path="/LeeLoo/page/:page" component={UsersTable} />
         <Route
           render={() => {
             return <ERR404 />;
