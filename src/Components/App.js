@@ -7,8 +7,8 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" component={UsersTable} />
-        <Route exact path="/page/:page" component={UsersTable} />
+        <Route exact path="/LeeLoo" component={UsersTable} />
+        <Route exact path="LeeLoo/page/:page" component={UsersTable} />
         <Route
           render={() => {
             return <ERR404 />;
