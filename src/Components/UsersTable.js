@@ -176,7 +176,7 @@ const UsersTable = () => {
         )}
       </TableContainer>
 
-      <Link style={{ textDecoration: "none" }} to={`/page/${offset}`} target>
+      <Link style={{ textDecoration: "none" }} to={`/LeeLoo/page/${offset}`} target>
         <Pagination
           className="pagination"
           count={offset > offsetLimit ? routerPage : offsetLimit}
