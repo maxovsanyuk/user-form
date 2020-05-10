@@ -1,6 +1,6 @@
 import React from "react";
 import UsersTable from "./UsersTable";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import ERR404 from "./ERR404";
 
 const App = () => {
