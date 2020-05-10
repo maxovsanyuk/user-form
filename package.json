@@ -16,7 +16,6 @@
     "@testing-library/user-event": "^7.1.2",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier-react": "0.0.24",
-    "express": "^4.17.1",
     "gh-pages": "^2.2.0",
     "heroku": "^7.40.0",
     "lodash": "^4.17.15",
