@@ -2,7 +2,7 @@
   "name": "leeloo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.io/LeeLoo",
+  "homepage": "https://github.com/maxovsanyuk.github.io/Leeloo",
   "buildpacks": [
     {
       "url": "mars/create-react-app"
