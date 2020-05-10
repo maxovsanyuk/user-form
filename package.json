@@ -1,8 +1,8 @@
 {
+  "homepage": "https://maxovsanyuk.github.io/LeeLoo",
   "name": "leeloo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/maxovsanyuk.github.io/Leeloo",
   "buildpacks": [
     {
       "url": "mars/create-react-app"
@@ -17,6 +17,7 @@
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier-react": "0.0.24",
     "express": "^4.17.1",
+    "gh-pages": "^2.2.0",
     "heroku": "^7.40.0",
     "lodash": "^4.17.15",
     "logger": "0.0.1",
