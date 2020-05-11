@@ -1,86 +1,65 @@
 import {
-  LOAD_USERS_DATA,
-  HIDE_ALERT,
-  HIDE_LOADER,
-  SHOW_ALERT,
-  SHOW_LOADER,
-  SET_OFFSET,
+  SET_NEXT_STEP,
+  SET_PREV_STEP,
+  SET_ERROR,
+  SET_CHOOSEN_VALUE,
+  SET_STEP_ONE,
+  SET_STEP_TWO,
+  SET_STEP_THREE,
+  SET_STEP_FOUR,
 } from "./types";
 
-export function showLoader() {
+export function setNextStep(payload) {
   return {
-    type: SHOW_LOADER,
-  };
-}
-
-export function hideLoader() {
-  return {
-    type: HIDE_LOADER,
-  };
-}
-
-export function showAlert() {
-  return {
-    type: SHOW_ALERT,
-  };
-}
-
-export function hideAlert() {
-  return {
-    type: HIDE_ALERT,
-  };
-}
-
-export function setOffset(payload) {
-  return {
-    type: SET_OFFSET,
+    type: SET_NEXT_STEP,
     payload,
   };
 }
 
-async function fetchData({ token, url }) {
-  const res = await fetch(url, {
-    method: "GET",
-    headers: {
-      Accept: "application/json",
-      Authorization: `Bearer ${token}`,
-      "Content-Type": "application/json",
-      "X-Leeloo-AuthToken": token,
-    },
-  });
-
-  return await res.json();
+export function setStepOne(payload) {
+  return {
+    type: SET_STEP_ONE,
+    payload,
+  };
 }
 
-export function fetchListOfUsers({ limit, offset, token }) {
-  return async (dispatch) => {
-    try {
-      dispatch(showLoader());
-      const generalUsersData = await fetchData({
-        token,
-        url: `https://api.leeloo.ai/api/v1/accounts?limit=${limit}&offset=${offset}`,
-      });
+export function setPrevStep(payload) {
+  return {
+    type: SET_PREV_STEP,
+    payload,
+  };
+}
 
-      const fullUsersData = await Promise.all(
-        generalUsersData.data.map(async (u) => {
-          return {
-            ...u,
-            addUserData: await fetchData({
-              token,
-              url: `https://api.leeloo.ai/api/v1/accounts/${u.id}?include=contactedUsers,orders&limit=${limit}&offset=${offset}`,
-            }),
-          };
-        })
-      );
+export function setChosenValue(payload) {
+  return {
+    type: SET_CHOOSEN_VALUE,
+    payload,
+  };
+}
 
-      dispatch({
-        type: LOAD_USERS_DATA,
-        payload: fullUsersData,
-      });
-      dispatch(hideLoader());
-    } catch (e) {
-      console.warn(e);
-      // dispatch(showAlert())
-    }
+export function setStepTwo(payload) {
+  return {
+    type: SET_STEP_TWO,
+    payload,
+  };
+}
+
+export function setStepThree(payload) {
+  return {
+    type: SET_STEP_THREE,
+    payload,
+  };
+}
+
+export function setStepFour(payload) {
+  return {
+    type: SET_STEP_FOUR,
+    payload,
+  };
+}
+
+export function setError() {
+  return {
+    type: SET_ERROR,
   };
 }

@@ -30,7 +30,7 @@ const Component404 = styled.div`
 const ERR404 = () => {
   return (
     <Component404>
-      <Link to="/LeeLoo">
+      <Link to="/user-form">
         <GoBackBtn />
       </Link>
     </Component404>

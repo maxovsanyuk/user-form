@@ -1,9 +1,10 @@
-export const LOAD_USERS_DATA = "APP/LOAD_USERS_DATA";
+export const SET_NEXT_STEP = "APP/SET_CURRENT_STEP";
+export const SET_PREV_STEP = "APP/SET_PREV_STEP";
 
-export const SHOW_LOADER = "APP/SHOW_LOADER";
-export const HIDE_LOADER = "APP/HIDE_LOADER";
+export const SET_STEP_ONE = "APP/SET_STEP_ONE";
+export const SET_STEP_TWO = "APP/SET_STEP_TWO";
+export const SET_STEP_THREE = "APP/SET_STEP_THREE";
+export const SET_STEP_FOUR = "APP/SET_STEP_FOUR";
 
-export const SHOW_ALERT = "APP/SHOW_ALERT";
-export const HIDE_ALERT = "APP/HIDE_ALERT";
-
-export const SET_OFFSET = "APP/SET_OFFSET";
+export const SET_ERROR = "APP/SET_ERROR";
+export const SET_CHOOSEN_VALUE = "APP/SET_CHOOSEN_VALUE";

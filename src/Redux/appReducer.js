@@ -1,43 +1,90 @@
 import {
-  SHOW_LOADER,
-  HIDE_LOADER,
-  SHOW_ALERT,
-  HIDE_ALERT,
-  LOAD_USERS_DATA,
-  SET_OFFSET,
+  SET_NEXT_STEP,
+  SET_STEP_ONE,
+  SET_ERROR,
+  SET_CHOOSEN_VALUE,
+  SET_PREV_STEP,
+  SET_STEP_TWO,
+  SET_STEP_THREE,
+  SET_STEP_FOUR,
 } from "./types";
 
-const initState = {
-  isloading: false,
-  isAlert: false,
-  token:
-    "cmpc3hcajyh3e5ksz6xho9t77flp4pesa300js9y8w9v6xptzj0vlk0halesk27hgqslukjxpepzkmaz6jpfj8zw0x5fwsajezvb",
-  limit: 10,
-  offset: 1,
-  offsetLimit: 100,
+const initialState = {
+  stepOneValue: null,
+  stepTwoValue: 1,
+  stepThreeValues: {},
+  stepFourValue: null,
+  isChosenValue: false,
+  currentStep: 1,
+  statusLineWidth: 25,
+  showPrevState: false,
+  isError: false,
 };
 
-export const appReducer = (state = initState, action) => {
+export const appReducer = (state = initialState, action) => {
   const { type, payload } = action;
 
   switch (type) {
-    case SHOW_LOADER:
-      return { ...state, isloading: true };
+    case SET_NEXT_STEP:
+      return {
+        ...state,
+        currentStep: payload,
+        showPrevState: payload > 1,
+        statusLineWidth: state.statusLineWidth + 25,
+        isChosenValue: false,
+      };
 
-    case HIDE_LOADER:
-      return { ...state, isloading: false };
+    case SET_PREV_STEP:
+      return {
+        ...state,
+        currentStep: payload,
+        showPrevState: payload > 1,
+        statusLineWidth: state.statusLineWidth - 25,
+      };
 
-    case SHOW_ALERT:
-      return { ...state, isAlert: true };
+    case SET_STEP_ONE:
+      return {
+        ...state,
+        stepOneValue: payload,
+        isChosenValue: true,
+        isError: false,
+      };
 
-    case HIDE_ALERT:
-      return { ...state, isAlert: null };
+    case SET_STEP_TWO:
+      return {
+        ...state,
+        stepTwoValue: payload,
+        isChosenValue: true,
+        isError: false,
+      };
 
-    case LOAD_USERS_DATA:
-      return { ...state, isAlert: null, usersData: payload };
+    case SET_STEP_THREE:
+      return {
+        ...state,
+        stepThreeValues: payload,
+        isChosenValue: true,
+        isError: false,
+      };
 
-    case SET_OFFSET:
-      return { ...state, offset: payload };
+    case SET_STEP_FOUR:
+      return {
+        ...state,
+        stepFourValue: payload,
+        isChosenValue: true,
+        isError: false,
+      };
+
+    case SET_ERROR:
+      return {
+        ...state,
+        isError: true,
+      };
+
+    case SET_CHOOSEN_VALUE:
+      return {
+        ...state,
+        isChosenValue: payload,
+      };
 
     default:
       return { ...state };
