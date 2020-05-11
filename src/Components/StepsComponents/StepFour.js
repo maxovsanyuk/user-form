@@ -31,13 +31,17 @@ const StepFour = () => {
   const state = useSelector((state) => state.app);
   const { stepOneValue, stepTwoValue, stepThreeValues, stepFourValue } = state;
 
+  const stepThreeAmountOfValues = Object.values(stepThreeValues).filter(
+    (i) => i.checked
+  ).length;
+
   const thirdStepResult =
-    Object.values(stepThreeValues).length === 1
-      ? 10
-      : Object.values(stepThreeValues).length * 5;
+    stepThreeAmountOfValues === 1 ? 10 : stepThreeAmountOfValues * 5;
 
   const totalValue =
     parseInt(stepOneValue) + Math.pow(stepTwoValue, 2) + thirdStepResult;
+
+  console.log(thirdStepResult, "thirdStepResult");
 
   return (
     <FormControl>
