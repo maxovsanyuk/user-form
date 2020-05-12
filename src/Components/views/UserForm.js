@@ -1,14 +1,14 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
-import Alert from "@material-ui/lab/Alert";
 
+import StepOne from "../StepsComponents/StepOne";
+import StepTwo from "../StepsComponents/StepTwo";
+import StepThree from "../StepsComponents/StepThree";
+import StepFour from "../StepsComponents/StepFour";
+
+import NavigationBtnsComponent from "../ButtonsComponents/NavigationBtnsComponent";
 import StatusLine from "./StatusLine";
-import StepOne from "./StepsComponents/StepOne";
-import StepTwo from "./StepsComponents/StepTwo";
-import StepThree from "./StepsComponents/StepThree";
-import StepFour from "./StepsComponents/StepFour";
-import NavigationBtnsComponent from "./NavigationBtnsComponent";
 import Error from "./Error";
 
 const WrapperBox = styled.div`

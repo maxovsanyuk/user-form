@@ -1,6 +1,10 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setError, setNextStep, setPrevStep } from "../Redux/actionsCreators";
+import {
+  setError,
+  setNextStep,
+  setPrevStep,
+} from "../../Redux/actionsCreators";
 import styled from "styled-components";
 
 const NavigationBtnBox = styled.div`

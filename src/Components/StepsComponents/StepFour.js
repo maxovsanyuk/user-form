@@ -9,7 +9,7 @@ import Radio from "@material-ui/core/Radio";
 
 import { useSelector, useDispatch } from "react-redux";
 import { setStepFour } from "../../Redux/actionsCreators";
-import TotalValueComp from "../TotalValueComp";
+import TotalValueComp from "../views/TotalValueComp";
 
 const GreenRadio = withStyles({
   root: {

@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import UserForm from "./UserForm";
-import ERR404 from "./ERR404";
+import UserForm from "./views/UserForm";
+import ERR404 from "./views/ERR404";
 
 const App = () => {
   return (
