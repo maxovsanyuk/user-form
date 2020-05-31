@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import svg404 from "../../img/404.gif";
+import svg404 from "../../images/404.gif";
 import GoBackBtn from "../ButtonsComponents/GobackBtn";
 
 const Component404 = styled.div`
